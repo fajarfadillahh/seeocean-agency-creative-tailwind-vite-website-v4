@@ -1,4 +1,34 @@
+/* ===== FONT GOOGLE ===== */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;700&display=swap");
+
 /* ===== Add the Tailwind directives to your CSS ===== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ==== REUSABLE CSS CLASS ===== */
+@layer components {
+  /* section class */
+  .section {
+    @apply pt-32 pb-16;
+  }
+  .section-title {
+    @apply text-[28px] text-slate-900 font-title font-reguler pb-4;
+  }
+  .section-text {
+    @apply text-[15px] text-slate-600 leading-text pb-8;
+  }
+
+  /* button class */
+  .button-fill {
+    @apply h-[52px] flex justify-center items-center py-4 px-8 bg-pink-600 rounded-lg text-[15px] text-white font-bold;
+  }
+  .button-outline {
+    @apply h-[52px] flex justify-center items-center py-4 px-8 border-2 border-solid border-pink-600 rounded-lg text-[15px] text-pink-600 font-bold transition-all duration-300 hover:bg-pink-600 hover:text-white;
+  }
+
+  /* container class */
+  .container {
+    @apply max-w-[1120px] w-[calc(100%-3rem)] mx-auto;
+  }
+}
