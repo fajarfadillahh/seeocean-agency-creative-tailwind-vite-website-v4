@@ -70,3 +70,14 @@
 .works__content-number {
   @apply font-title font-reguler text-[28px] text-slate-900;
 }
+
+/* ===== FOOTER SECTION ===== */
+.footer__content-title {
+  @apply text-[20px] text-slate-900 font-title font-reguler pb-6;
+}
+.footer__content-list {
+  @apply flex flex-col gap-2;
+}
+.footer__content-link {
+  @apply text-[15px] text-slate-600 hover:text-rose-500 hover:underline;
+}
