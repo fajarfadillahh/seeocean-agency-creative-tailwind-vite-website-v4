@@ -19,6 +19,51 @@
     <!-- 🌙 ☀️ -->
   </head>
   <body class="font-text font-reguler transition-all duration-300">
+    <!-- ===== HEADER SECTION ===== -->
+    <header
+      class="header fixed w-full top-0 left-0 bg-transparent z-50 transition-all duration-300"
+      id="header"
+    >
+      <div
+        class="header__container container h-24 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="header__logo inline-flex items-center gap-1 text-[20px] text-slate-900 font-title font-reguler"
+        >
+          <img src="./src/img/icon.svg" alt="" class="header__logo-icon w-10" />
+          SeeOcean.
+        </a>
+
+        <div class="header__menu" id="header-menu">
+          <ul class="header__list flex flex-col gap-6">
+            <li><a href="#" class="header__link">Home</a></li>
+            <li><a href="#" class="header__link">About</a></li>
+            <li><a href="#" class="header__link">Pricing</a></li>
+            <li><a href="#" class="header__link">Support</a></li>
+          </ul>
+
+          <!-- theme toggle -->
+          <div
+            class="header__theme absolute top-8 right-8 text-2xl cursor-pointer"
+            id="theme-toggle"
+          >
+            <span class="header__theme-icon">🌙</span>
+          </div>
+
+          <a href="#" class="header__button button-fill mt-6">Get Started</a>
+        </div>
+
+        <div
+          class="header__toggle inline-flex text-2xl text-slate-900 cursor-pointer"
+          id="header-toggle"
+        >
+          <i class="bx bx-grid-alt"></i>
+        </div>
+      </div>
+    </header>
+    <!-- ===== HEADER SECTION ===== -->
+
     <!-- ===== MAIN JS ===== -->
     <script type="module" src="./src/js/main.js"></script>
   </body>

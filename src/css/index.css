@@ -21,14 +21,28 @@
 
   /* button class */
   .button-fill {
-    @apply h-[52px] flex justify-center items-center py-4 px-8 bg-pink-600 rounded-lg text-[15px] text-white font-bold;
+    @apply h-[52px] flex justify-center items-center py-4 px-8 bg-rose-500 rounded-lg text-[15px] text-white font-bold;
   }
   .button-outline {
-    @apply h-[52px] flex justify-center items-center py-4 px-8 border-2 border-solid border-pink-600 rounded-lg text-[15px] text-pink-600 font-bold transition-all duration-300 hover:bg-pink-600 hover:text-white;
+    @apply h-[52px] flex justify-center items-center py-4 px-8 border-2 border-solid border-rose-500 rounded-lg text-[15px] text-rose-500 font-bold transition-all duration-300 hover:bg-rose-500 hover:text-white;
   }
 
   /* container class */
   .container {
     @apply max-w-[1120px] w-[calc(100%-3rem)] mx-auto;
   }
+}
+
+/* ===== HEADER SECTION ===== */
+@media screen and (max-width: 768px) {
+  .header__menu {
+    @apply fixed w-full top-24 left-0 text-center py-8 px-16 bg-white transition-all duration-300 opacity-0 scale-y-0 origin-top;
+  }
+}
+.header__link {
+  @apply text-[15px] text-slate-900 hover:text-rose-500;
+}
+/* show menu */
+.header__menu.show-menu {
+  @apply opacity-100 scale-y-100 shadow-lg;
 }
