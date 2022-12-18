@@ -81,3 +81,8 @@
 .footer__content-link {
   @apply text-[15px] text-slate-600 hover:text-rose-500 hover:underline;
 }
+
+/* ===== SCROLLUP SECTION ===== */
+.scrollup.scroll-action {
+  @apply bottom-16;
+}
