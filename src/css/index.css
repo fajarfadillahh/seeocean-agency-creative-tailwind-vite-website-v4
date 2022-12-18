@@ -50,3 +50,17 @@
 .header.sticky-action {
   @apply bg-white shadow-lg;
 }
+
+/* ===== SERVICE SECTION ===== */
+.service__content {
+  @apply flex items-start gap-6;
+}
+.service__content-title {
+  @apply font-title font-reguler text-[20px] text-slate-900 pb-4;
+}
+.service__content-text {
+  @apply text-[15px] text-slate-600 leading-text;
+}
+.service__content-icon {
+  @apply w-10;
+}
