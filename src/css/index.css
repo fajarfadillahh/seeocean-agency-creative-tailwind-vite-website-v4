@@ -46,3 +46,7 @@
 .header__menu.show-menu {
   @apply opacity-100 scale-y-100 shadow-lg;
 }
+/* sticky header */
+.header.sticky-action {
+  @apply bg-white shadow-lg;
+}
