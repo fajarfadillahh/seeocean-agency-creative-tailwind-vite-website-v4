@@ -40,7 +40,7 @@
   }
 }
 .header__link {
-  @apply text-[15px] text-slate-900 hover:text-rose-500;
+  @apply text-[15px] text-slate-600 hover:text-rose-500;
 }
 /* show menu */
 .header__menu.show-menu {
