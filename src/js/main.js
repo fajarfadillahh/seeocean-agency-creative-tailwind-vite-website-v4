@@ -34,3 +34,35 @@ function scrollUp() {
     : scrollup.classList.remove("scroll-action");
 }
 window.addEventListener("scroll", scrollUp);
+
+// ===== DARK MODE =====
+var themeToggleDarkIcon = document.getElementById("themeToggleDarkIcon");
+var themeToggleLightIcon = document.getElementById("themeToggleLightIcon");
+
+// change the icons inside the button based on previous setting
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  themeToggleDarkIcon.classList.remove("hidden");
+} else {
+  themeToggleLightIcon.classList.remove("hidden");
+}
+
+// theme toggle button
+var themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", () => {
+  // toggle icons inside the button
+  themeToggleDarkIcon.classList.toggle("hidden");
+  themeToggleLightIcon.classList.toggle("hidden");
+
+  // if setting via localStorage previously
+  if (localStorage.theme === "light") {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+});

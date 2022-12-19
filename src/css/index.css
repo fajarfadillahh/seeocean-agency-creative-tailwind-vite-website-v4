@@ -13,10 +13,10 @@
     @apply pt-32 pb-16;
   }
   .section-title {
-    @apply text-[28px] text-slate-900 font-title font-reguler pb-4 sm:text-[32px] lg:text-[38px];
+    @apply text-[28px] text-slate-900 font-title font-reguler pb-4 sm:text-[32px] lg:text-[38px] dark:text-white;
   }
   .section-text {
-    @apply text-[15px] text-slate-600 leading-text pb-8;
+    @apply text-[15px] text-slate-600 leading-text pb-8 dark:text-white;
   }
 
   /* button class */
@@ -36,11 +36,11 @@
 /* ===== HEADER SECTION ===== */
 @media screen and (max-width: 768px) {
   .header__menu {
-    @apply fixed w-full top-24 left-0 text-center py-8 px-16 bg-white transition-all duration-300 opacity-0 scale-y-0 origin-top;
+    @apply fixed w-full top-24 left-0 text-center py-8 px-16 bg-white transition-all duration-300 opacity-0 scale-y-0 origin-top dark:bg-slate-900;
   }
 }
 .header__link {
-  @apply text-[15px] text-slate-600 hover:text-rose-500;
+  @apply text-[15px] text-slate-600 hover:text-rose-500 dark:text-white dark:hover:text-rose-500;
 }
 /* show menu */
 .header__menu.show-menu {
@@ -58,28 +58,28 @@
 }
 .service__content-title,
 .works__content-title {
-  @apply font-title font-reguler text-[20px] text-slate-900 pb-4;
+  @apply font-title font-reguler text-[20px] text-slate-900 pb-4 dark:text-white;
 }
 .service__content-text,
 .works__content-text {
-  @apply text-[15px] text-slate-600 leading-text;
+  @apply text-[15px] text-slate-600 leading-text dark:text-white;
 }
 .service__content-icon {
   @apply w-10;
 }
 .works__content-number {
-  @apply font-title font-reguler text-[28px] text-slate-900;
+  @apply font-title font-reguler text-[28px] text-slate-900 dark:text-white;
 }
 
 /* ===== FOOTER SECTION ===== */
 .footer__content-title {
-  @apply text-[20px] text-slate-900 font-title font-reguler pb-6;
+  @apply text-[20px] text-slate-900 font-title font-reguler pb-6 dark:text-white;
 }
 .footer__content-list {
   @apply flex flex-col gap-2;
 }
 .footer__content-link {
-  @apply text-[15px] text-slate-600 hover:text-rose-500 hover:underline;
+  @apply text-[15px] text-slate-600 hover:text-rose-500 hover:underline dark:text-white dark:hover:text-rose-500;
 }
 
 /* ===== SCROLLUP SECTION ===== */

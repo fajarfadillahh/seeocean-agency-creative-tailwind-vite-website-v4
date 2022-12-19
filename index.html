@@ -16,12 +16,27 @@
       rel="stylesheet"
     />
 
+    <!-- On page load or when changing themes, best to add inline in `head` to avoid FOUC -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+
     <!-- 🌙 ☀️ -->
   </head>
-  <body class="font-text font-reguler transition-all duration-300">
+  <body
+    class="font-text font-reguler transition-all duration-300 dark:bg-slate-900"
+  >
     <!-- ===== HEADER SECTION ===== -->
     <header
-      class="header fixed w-full top-0 left-0 bg-transparent z-50 transition-all duration-300"
+      class="header fixed w-full top-0 left-0 bg-transparent z-50 transition-all duration-300 dark:bg-slate-900"
       id="header"
     >
       <div
@@ -29,7 +44,7 @@
       >
         <a
           href="#"
-          class="header__logo inline-flex items-center gap-1 text-[20px] text-slate-900 font-title font-reguler"
+          class="header__logo inline-flex items-center gap-1 text-[20px] text-slate-900 font-title font-reguler dark:text-white"
         >
           <img src="./src/img/icon.svg" alt="" class="header__logo-icon w-10" />
           SeeOcean.
@@ -53,7 +68,12 @@
             class="header__theme absolute top-8 right-8 text-2xl cursor-pointer md:static"
             id="theme-toggle"
           >
-            <span class="header__theme-icon">🌙</span>
+            <span class="header__theme-icon hidden" id="themeToggleDarkIcon"
+              >☀️</span
+            >
+            <span class="header__theme-icon hidden" id="themeToggleLightIcon"
+              >🌙</span
+            >
           </div>
 
           <a href="#" class="header__button button-fill mt-6 md:mt-0"
@@ -62,7 +82,7 @@
         </div>
 
         <div
-          class="header__toggle inline-flex text-2xl text-slate-900 cursor-pointer md:hidden"
+          class="header__toggle inline-flex text-2xl text-slate-900 cursor-pointer md:hidden dark:text-white"
           id="header-toggle"
         >
           <i class="bx bx-grid-alt"></i>
@@ -98,7 +118,7 @@
               <input
                 type="email"
                 placeholder="Enter email address"
-                class="home__form-input w-full h-[52px] py-4 px-8 border-2 border-solid border-slate-300 rounded-lg text-center text-[15px] text-slate-900 font-bold placeholder:text-[15px] placeholder:text-slate-600 placeholder:font-reguler sm:text-left sm:px-6"
+                class="home__form-input w-full h-[52px] py-4 px-8 border-2 border-solid border-slate-300 rounded-lg text-center text-[15px] text-slate-900 font-bold placeholder:text-[15px] placeholder:text-slate-600 placeholder:font-reguler sm:text-left sm:px-6 dark:bg-slate-700 dark:border-slate-700 dark:text-white dark:placeholder:text-slate-300"
               />
               <button class="home__form-button button-fill">Subscribe</button>
             </form>
@@ -106,7 +126,9 @@
             <div
               class="home__sponsored flex justify-center items-center gap-4 lg:justify-start"
             >
-              <p class="home__sponsored-text text-[12px] text-slate-600">
+              <p
+                class="home__sponsored-text text-[12px] text-slate-600 dark:text-white"
+              >
                 Sponsored by:
               </p>
 
@@ -141,7 +163,9 @@
 
       <!-- ===== SERVICE SECTION ===== -->
       <section class="service pt-24 pb-8 xl:pt-16 xl:pb-0">
-        <div class="service__wrapper py-8 bg-blue-50 lg:py-16">
+        <div
+          class="service__wrapper py-8 bg-blue-50 lg:py-16 dark:bg-slate-700"
+        >
           <div class="service__container container grid gap-8">
             <div
               class="service__data justify-self-center text-center xs:w-[400px] sm:w-[460px] lg:w-auto"
@@ -248,7 +272,7 @@
                   class="feature__content-list flex flex-col items-start justify-self-center gap-4 lg:justify-self-start"
                 >
                   <li
-                    class="feature__content-text inline-flex items-center gap-2 text-[15px] text-slate-600"
+                    class="feature__content-text inline-flex items-center gap-2 text-[15px] text-slate-600 dark:text-white"
                   >
                     <i
                       class="bx bx-check-circle feature__content-check inline-flex text-[1.2rem] text-rose-500"
@@ -256,7 +280,7 @@
                     Unlimited design possibility
                   </li>
                   <li
-                    class="feature__content-text inline-flex items-center gap-2 text-[15px] text-slate-600"
+                    class="feature__content-text inline-flex items-center gap-2 text-[15px] text-slate-600 dark:text-white"
                   >
                     <i
                       class="bx bx-check-circle feature__content-check inline-flex text-[1.2rem] text-rose-500"
@@ -337,7 +361,7 @@
 
       <!-- ===== WORKS SECTION ===== -->
       <section class="works pt-24 pb-8 xl:pt-16 xl:pb-0">
-        <div class="works__wrapper py-8 bg-blue-50 lg:py-16">
+        <div class="works__wrapper py-8 bg-blue-50 lg:py-16 dark:bg-slate-700">
           <div class="works__container container grid gap-8">
             <div
               class="works__data justify-self-center text-center xs:w-[400px] sm:w-[460px] lg:w-auto"
@@ -430,7 +454,7 @@
           <div class="footer__data">
             <a
               href="#"
-              class="footer__data-logo inline-flex items-center gap-1 text-[20px] text-slate-900 font-title font-reguler"
+              class="footer__data-logo inline-flex items-center gap-1 text-[20px] text-slate-900 font-title font-reguler dark:text-white"
             >
               <img
                 src="./src/img/icon.svg"
@@ -440,7 +464,7 @@
               SeeOcean.
             </a>
             <p
-              class="footer__data-text text-[15px] text-slate-600 leading-text pt-4 xl:w-[300px]"
+              class="footer__data-text text-[15px] text-slate-600 leading-text pt-4 xl:w-[300px] dark:text-white"
             >
               Get your blood tests delivered at let home collect sample from the
               victory.
@@ -494,7 +518,7 @@
         </div>
 
         <p
-          class="footer__copy pt-8 border-t-2 border-solid border-slate-300 text-[15px] text-slate-600 leading-text text-center"
+          class="footer__copy pt-8 border-t-2 border-solid border-slate-300 text-[15px] text-slate-600 leading-text text-center dark:text-white"
         >
           &copy; Copyrights 2022, all rights reserved - Develop by Fajar
           Fadillah A ❤️
