@@ -91,3 +91,11 @@
 ::selection {
   @apply bg-rose-500 text-white;
 }
+
+/* ===== ::-WEBKIT-SCROLLBAR ===== */
+::-webkit-scrollbar {
+  @apply w-2 bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400;
+}
