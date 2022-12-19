@@ -74,9 +74,11 @@
     <main class="overflow-hidden">
       <!-- ===== HOME SECTION ===== -->
       <section class="home section">
-        <div class="home__container container grid gap-12">
+        <div
+          class="home__container container grid gap-12 lg:grid-cols-2 lg:items-center"
+        >
           <div
-            class="home__data justify-self-center text-center grid gap-8 xs:w-[400px] sm:w-[460px]"
+            class="home__data justify-self-center text-center grid gap-8 xs:w-[400px] sm:w-[460px] lg:w-auto lg:justify-self-start lg:text-left"
           >
             <div>
               <h1 class="home__title section-title">
@@ -98,7 +100,9 @@
               <button class="home__form-button button-fill">Subscribe</button>
             </form>
 
-            <div class="home__sponsored flex justify-center items-center gap-4">
+            <div
+              class="home__sponsored flex justify-center items-center gap-4 lg:justify-start"
+            >
               <p class="home__sponsored-text text-[12px] text-slate-600">
                 Sponsored by:
               </p>
@@ -126,7 +130,7 @@
           <img
             src="./src/img/home-img.png"
             alt=""
-            class="home__img justify-self-center xs:w-[400px] sm:w-[460px]"
+            class="home__img justify-self-center xs:w-[400px] sm:w-[460px] lg:w-auto"
           />
         </div>
       </section>
